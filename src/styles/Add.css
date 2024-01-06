@@ -1,0 +1,29 @@
+.data input{
+    background-color: white;
+    border-radius: 20px 20px;
+    border-width: 4px;
+    border-color: #6d2829;
+    border-style: solid;
+    width: 20rem;
+    height: 2.5rem;
+}
+
+.data div{
+    margin: 1rem 0;
+}
+
+.btn_add{
+    margin: 2rem 0;
+}
+
+.data img{
+    width: 10%;
+}
+
+h2{
+    font-weight: bold;
+}
+h3{
+    font-weight: lighter;
+    margin-top: 0;
+}
