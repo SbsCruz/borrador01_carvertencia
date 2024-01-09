@@ -1,5 +1,4 @@
-import './styles/Login.css';
-import Logo from './components/Login_Admin/Logo';
+import { Logo } from './components/Login_Admin/Logo';
 import { Register } from './components/Login_Admin/Register';
 
 function Login() {

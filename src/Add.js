@@ -1,5 +1,4 @@
-import './styles/Add.css';
-import { Banner } from './components/ListaBrig/Banner';
+import { Banner } from './components/Comunes/Banner';
 import { FormAdd } from './components/AddBrig/FormAdd';
 
 function Login() {

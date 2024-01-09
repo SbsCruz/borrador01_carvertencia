@@ -1,5 +1,4 @@
-import './styles/List.css';
-import { Banner } from './components/ListaBrig/Banner';
+import { Banner } from './components/Comunes/Banner';
 import { ListaBrig } from './components/ListaBrig/ListaBrig';
 
 function Login() {
