@@ -26,7 +26,7 @@ export const Register = () => {
 
 
                 {/* Inputs para ingresar username y password */}
-                <Container>
+                <Container sx={{mb:"2rem"}}>
                     <Typography margin={"1rem 0"} variant="body1">Ingresa tu usuario</Typography>
                     <TextField margin={"1rem 0"} type="text" id="userName" placeholder="username" sx={{ bgcolor: "white" }} />
 
@@ -34,15 +34,11 @@ export const Register = () => {
                     <TextField margin={"1rem 0 2rem"} type="password" id="passwd" placeholder="password" sx={{ bgcolor: "white" }} />
                 </Container>
 
-                {/* Etiqueta vacía para agregar separación */}
-                <u style={{ margin: "0 0 2rem" }}></u>
-
                 {/* Componente Botón Custommizable  */}
                 <CustomBtn texto={"INGRESA"} />
-                <u style={{ margin: "1rem 0 0" }}></u>
 
                 {/* Container para opciones adicionales */}
-                <Container>
+                <Container sx={{mt:"2rem"}}>
                     <Link href="#" sx={{ color: "white", fontSize: 10 }}> <u>¿Haz olvidado tu contraseña?</u></Link>
                     <Typography variant="body2" fontSize={10} sx={{ marginBottom: "10rem" }}>
                         Revisa los términos y condiciones <Link href="#" sx={{ color: "white", fontSize: 10 }}> <u>aquí</u></Link>

@@ -60,7 +60,7 @@ export const FormAdd = () => {
                 </Container>
 
                 {/* Se tiene el componente botón, el cual es customizable dado que se usa en varias interfaces y tiene el mismo estilo */}
-                <CustomBtn texto={"AÑADIR BRIGADISTA"} />
+                <CustomBtn texto={"AÑADIR BRIGADISTA"} style={{ marginBottom: "10rem" }} />
 
                 {/* etiqueta vacía para aumentar el tamaño de la página y se vea del color navy blue  */}
                 <u style={{ marginBottom: "10rem" }} />

@@ -1,6 +1,6 @@
 // Componente CustomBtn que se muestra en varias interfaces
 
-import { Button, createTheme } from '@mui/material'
+import { Button } from '@mui/material'
 import React from 'react'
 
 export const CustomBtn = ({ texto }) => {

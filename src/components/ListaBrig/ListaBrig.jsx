@@ -22,13 +22,13 @@ export const ListaBrig = () => {
                 {/* Titulo y subtitulo */}
                 {/* Definimos un h3 en negrita, alineado al centro el título del componente */}
                 <Typography variant="h3" fontWeight={"bold"} textAlign={'center'}> BRIGADISTAS</Typography>
-                {/* Definimos un h4 en letra más fina, alineado al centro que muestra la comunidad  */}
+                {/* Definimos un h4 en letra más fina, alineado al centro Fque muestra la comunidad  */}
                 <Typography variant="h4" fontWeight={"light"} textAlign={'center'}> COMUNIDAD B</Typography>
 
                 {/* Input de búsqueda de Brigadistas*/}
                 <TextField
                     placeholder="Busca Brigadistas"                 // El placeholder del input
-                    variant='standard'                              // estándar para que tenga fondo
+                    variant='outlined'                              // estándar para que tenga fondo
                     sx={{ bgcolor: "white", width: "30%", p: 2 }}   // El fondo será blanco, un ancho al 30% y padding general de 16px
                 />
 
@@ -37,7 +37,7 @@ export const ListaBrig = () => {
                     <ListItem> {/* Con este componente definimos un <li> */}
                         <Avatar />  {/* este componente es un avatar predefinido de MUI*/}
                         <ListItemText sx={{                 // definimos el estilo del texto 
-                            mx: 6,                          // margen general de 48px
+                            mx: 6,                          // margen horizontal de 48px
                         }}
                             primary="Nombre Brigadista A"   // Texto del <li>
                         />
