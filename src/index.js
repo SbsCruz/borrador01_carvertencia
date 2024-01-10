@@ -32,7 +32,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <Add/> {/* Esta parte servirá para cambiar de componetenes */}
+      <Lista/> {/* Esta parte servirá para cambiar de componetenes Login, Lista, Add */}
     </ThemeProvider>
   </React.StrictMode>
 );

@@ -18,7 +18,8 @@ export const Banner = () => {
             }}>
                 <Container sx={{                // este Container tendrá el logo de la App y el saludo al admin oportuno
                     display: "flex",            // se organiza mediante flex
-                    alignItems: "center",       // se alinean al centro los items
+                    alignItems: "center", 
+                    ml:0                        // se alinean al centro los items
                 }}>
                     {/* Se agrega la imágen previamente importada al componente desde resources */}
                     <img src={car} alt="Logo" width={"8%"} style={{ marginRight: "1rem" }} />

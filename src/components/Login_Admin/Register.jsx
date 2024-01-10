@@ -15,8 +15,8 @@ export const Register = () => {
                 flexDirection: "column",      // flex en columna
                 alignItems: "center",         // items alineados al centro
                 textAlign: "center",          // texto también alineado al centro
-                padding: "0 20rem"            // padding horizontal de 20rem
-
+                padding: "0 20rem",           // padding horizontal de 20rem
+                height: "100vh"               // para que el fondo se complete
             }}>
                 {/* Titulo y Descripción */}
                 {/* Titulo en h2, con etiqueta de underlie, alineado a la izquierda y en negrita */}

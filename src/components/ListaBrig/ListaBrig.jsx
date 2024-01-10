@@ -14,7 +14,7 @@ export const ListaBrig = () => {
                 color: "white",                     // letras blancas
                 display: "flex",                    // usaremos flex
                 flexDirection: "column",            // la direcicón del flex será vertical
-                justifyContent: "space-between",    // la justificación será space-between
+                height:"100vh",                     // para que el fondo se complete
                 alignItems: "center",               // items alineado al centro
                 p: 2,                               // padding general de 16 pixeles
                 m: 0                                // sin margen
@@ -67,7 +67,7 @@ export const ListaBrig = () => {
                 <CustomBtn texto={"AÑADIR BRIGADISTA"} />
 
                 {/* La opción para seleccionar otra comunidad */}
-                <Link href="#" sx={{ color: "white", fontSize: 10, mb: 20, mt: 5 }}><u>O selecciona de otra comunidad</u></Link>
+                <Link href="#" sx={{ color: "white", fontSize: 10, mt: 5 }}><u>O selecciona de otra comunidad</u></Link>
 
             </Container>
         </>
