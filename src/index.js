@@ -1,3 +1,6 @@
+// Se realizan importaciones pertinentes de React y de Material UI
+// así como de los componentes de las interfaces desarrolladas
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import '@fontsource/roboto/300.css';
@@ -11,28 +14,27 @@ import Lista from './Lista';
 import Add from './Add';
 import { ThemeProvider, createTheme } from '@mui/material';
 
+// Se crea un theme de MUI en donde se define una paleta de colores
+// que se usarán en distintos componentes de la app
 const theme = createTheme({
-  palette:{
-    primary:{
-      main: "#6d2829",
+  palette:{             // paleta
+    primary:{           // color primario 
+      main: "#6d2829",  // color vino
     },
-    secondary:{
-      main: "#002c6f"
+    secondary:{         // color secundario
+      main: "#002c6f"   // color navy blue
     },
   }
 })
 
+// Se crea la aplicación
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <Login />
+      <Login/> {/* Esta parte servirá para cambiar de componetenes */}
 
     </ThemeProvider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

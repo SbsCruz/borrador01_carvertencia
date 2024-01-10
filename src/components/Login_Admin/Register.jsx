@@ -1,3 +1,5 @@
+// Componente Register que muestra los inputs para inciar sesión o registrarse
+
 import { Container, Typography, TextField, Link } from '@mui/material'
 import { CustomBtn } from '../Comunes/CustomBtn'
 
@@ -5,37 +7,47 @@ import { CustomBtn } from '../Comunes/CustomBtn'
 export const Register = () => {
     return (
         <>
-            <Container maxWidth={false} sx={{
-                bgcolor: "secondary.main",
-                color: "white",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                alignContent: "center",
-                textAlign: "center",
-                padding: "0 20rem"
+            {/* Container para todo el componente */}
+            <Container maxWidth={false} sx={{ // con maxWidth = false hacemos que no haya un ancho maximo, sino que ocupe toda la página
+                bgcolor: "secondary.main",    // fondo del color secundario de theme   
+                color: "white",               // letras blancas
+                display: "flex",              // organizado con flex
+                flexDirection: "column",      // flex en columna
+                alignItems: "center",         // items alineados al centro
+                textAlign: "center",          // texto también alineado al centro
+                padding: "0 20rem"            // padding horizontal de 20rem
 
             }}>
+                {/* Titulo y Descripción */}
+                {/* Titulo en h2, con etiqueta de underlie, alineado a la izquierda y en negrita */}
                 <Typography variant="h2" fontWeight={"bold"} textAlign={"left"}> <u>ADMINISTRADOR</u></Typography>
+                {/* Descripción en h4 con letra más fina, margen horizontal de 28rem y vertical de 1rem y alineado a la izquierda */}
                 <Typography variant="h4" fontWeight={"light"} margin={"1rem 28rem"} textAlign={"left"} > Regístrate o Inicia Sesión para cuidar de tu comunidad!</Typography>
-                <div className="registro">
+
+
+                {/* Inputs para ingresar username y password */}
+                <Container>
                     <Typography margin={"1rem 0"} variant="body1">Ingresa tu usuario</Typography>
-                    <TextField margin={"1rem 0"} type="text" id="userName" placeholder="username" sx={{bgcolor: "white"}} />
+                    <TextField margin={"1rem 0"} type="text" id="userName" placeholder="username" sx={{ bgcolor: "white" }} />
 
                     <Typography margin={"1rem 0"} variant="body1">Ingresa tu contraseña</Typography>
-                    <TextField margin={"1rem 0 2rem"} type="password" id="passwd" placeholder="password"  sx={{bgcolor: "white"}} />
-                </div>
-                <u style={{margin:"0 0 2rem"}}></u>
+                    <TextField margin={"1rem 0 2rem"} type="password" id="passwd" placeholder="password" sx={{ bgcolor: "white" }} />
+                </Container>
 
-                <CustomBtn texto={"INGRESA"}/>
-                <u style={{margin:"1rem 0 0"}}></u>
+                {/* Etiqueta vacía para agregar separación */}
+                <u style={{ margin: "0 0 2rem" }}></u>
 
-                <div className="etc">
-                    <Link href="#" sx={{ color: "white", fontSize:10}}>¿Haz olvidado tu contraseña?</Link>
-                    <Typography variant="body2" fontSize={10} sx={{marginBottom:"10rem"}}>
-                        Revisa los términos y condiciones <Link href="#" sx={{ color: "white" , fontSize:10}}>aquí</Link>
+                {/* Componente Botón Custommizable  */}
+                <CustomBtn texto={"INGRESA"} />
+                <u style={{ margin: "1rem 0 0" }}></u>
+
+                {/* Container para opciones adicionales */}
+                <Container>
+                    <Link href="#" sx={{ color: "white", fontSize: 10 }}> <u>¿Haz olvidado tu contraseña?</u></Link>
+                    <Typography variant="body2" fontSize={10} sx={{ marginBottom: "10rem" }}>
+                        Revisa los términos y condiciones <Link href="#" sx={{ color: "white", fontSize: 10 }}> <u>aquí</u></Link>
                     </Typography>
-                </div>
+                </Container>
             </Container>
         </>
     )

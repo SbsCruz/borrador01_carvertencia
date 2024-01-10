@@ -1,52 +1,51 @@
-import pfp from '../../resources/pfp.png'
+// Componente de Búsqueda y Visualización de Birgadistas
+
 import { CustomBtn } from '../Comunes/CustomBtn'
 import Typography from '@mui/material/Typography'
-import ListSubheader from '@mui/material/ListSubheader'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
-import { List, Grid, ListItem, ListItemText, Avatar, Container, IconButton, TextField } from '@mui/material'
+import { List, ListItem, ListItemText, Avatar, Container, TextField, Link } from '@mui/material'
 
 export const ListaBrig = () => {
     return (
         <>
+            {/* Definimos un Container que albergue todo el componente */}
             <Container maxWidth={false} sx={{
-                bgcolor: "secondary.main",
-                color: "white",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-between",
-                alignContent: "center",
-                alignItems: "center",
-                p: 2,
-                m: 0
+                bgcolor: "secondary.main",          // Fondo de color navy blue
+                color: "white",                     // letras blancas
+                display: "flex",                    // usaremos flex
+                flexDirection: "column",            // la direcicón del flex será vertical
+                justifyContent: "space-between",    // la justificación será space-between
+                alignItems: "center",               // items alineado al centro
+                p: 2,                               // padding general de 16 pixeles
+                m: 0                                // sin margen
             }}>
+                {/* Titulo y subtitulo */}
+                {/* Definimos un h3 en negrita, alineado al centro el título del componente */}
                 <Typography variant="h3" fontWeight={"bold"} textAlign={'center'}> BRIGADISTAS</Typography>
+                {/* Definimos un h4 en letra más fina, alineado al centro que muestra la comunidad  */}
                 <Typography variant="h4" fontWeight={"light"} textAlign={'center'}> COMUNIDAD B</Typography>
 
+                {/* Input de búsqueda de Brigadistas*/}
                 <TextField
-                    id="1"
-                    label="Busca Brigadistas"
-                    variant='standard'
-                    sx={{bgcolor:"white", width:"30%", borderBlockColor:"primary.main"}}
+                    placeholder="Busca Brigadistas"                 // El placeholder del input
+                    variant='standard'                              // estándar para que tenga fondo
+                    sx={{ bgcolor: "white", width: "30%", p: 2 }}   // El fondo será blanco, un ancho al 30% y padding general de 16px
                 />
+
+                {/*Lista de Brigadistas*/}
                 <List>
-                    <ListItem>
-                        <Avatar />
-                        <ListItemText sx={{
-                            alignItems: "center",
-                            display: "flex",
-                            justifyContent: "space-between",
-                            mx: 6,
+                    <ListItem> {/* Con este componente definimos un <li> */}
+                        <Avatar />  {/* este componente es un avatar predefinido de MUI*/}
+                        <ListItemText sx={{                 // definimos el estilo del texto 
+                            mx: 6,                          // margen general de 48px
                         }}
-                            primary="Nombre Brigadista A"
+                            primary="Nombre Brigadista A"   // Texto del <li>
                         />
-                        <MoreVertIcon />
+                        <MoreVertIcon /> {/* este componente es un icono predefinido de MUI*/}
                     </ListItem>
                     <ListItem>
                         <Avatar />
                         <ListItemText sx={{
-                            alignItems: "center",
-                            display: "flex",
-                            justifyContent: "space-between",
                             mx: 6,
                         }}
                             primary="Nombre Brigadista B"
@@ -56,9 +55,6 @@ export const ListaBrig = () => {
                     <ListItem>
                         <Avatar />
                         <ListItemText sx={{
-                            alignItems: "center",
-                            display: "flex",
-                            justifyContent: "space-between",
                             mx: 6,
                         }}
                             primary="Nombre Brigadista C"
@@ -67,9 +63,11 @@ export const ListaBrig = () => {
                     </ListItem>
                 </List>
 
-                <CustomBtn texto={"AÑADIR BRIGADISTA"}/>
+                {/* Se tiene el componete botón, el cual es customizable dado que se usa en varias interfaces y tiene el mismo estilo */}
+                <CustomBtn texto={"AÑADIR BRIGADISTA"} />
 
-                <u style={{margin:"3rem 0 10rem 0", fontSize:"10px"}}>O selecciona de otra comnunidad</u>
+                {/* La opción para seleccionar otra comunidad */}
+                <Link href="#" sx={{ color: "white", fontSize: 10, mb: 20, mt: 5 }}><u>O selecciona de otra comunidad</u></Link>
 
             </Container>
         </>

@@ -1,3 +1,5 @@
+// Componente que alberga componentes Banner y FormaAdd
+
 import { Banner } from './components/Comunes/Banner';
 import { FormAdd } from './components/AddBrig/FormAdd';
 

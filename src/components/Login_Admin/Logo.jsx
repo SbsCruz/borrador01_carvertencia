@@ -1,10 +1,12 @@
-import pfp from '../../resources/pfp.png'
+// Componente Logo que se usa en el Login
+
 import car from '../../resources/carLogo.png'
-import { Avatar, Container, Typography, MenuItem, Button, IconButton } from '@mui/material'
-import { FormatUnderlined, TitleOutlined } from '@mui/icons-material'
+import { Container } from '@mui/material'
 
 export const Logo = () => {
     return (
+
+        // es la misma configuración del Componente Banner pero del color secundario definido en theme
         <>
             <Container maxWidth={false} sx={{
                 bgcolor: "secondary.main",
@@ -17,7 +19,7 @@ export const Logo = () => {
                 m: 0
             }}>
 
-                    <img src={car} alt="" width={"8%"}  />
+                <img src={car} alt="" width={"8%"} />
             </Container>
         </>
     )

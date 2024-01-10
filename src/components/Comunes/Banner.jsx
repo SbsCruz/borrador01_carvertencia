@@ -1,30 +1,34 @@
-import pfp from '../../resources/pfp.png'
+// Componente Banner que se muestra en varias interfaces
+
 import car from '../../resources/carLogo.png'
-import { Avatar, Container, Typography, MenuItem, Button, IconButton } from '@mui/material'
-import { FormatUnderlined, TitleOutlined } from '@mui/icons-material'
+import { Avatar, Container, Typography } from '@mui/material'
 
 export const Banner = () => {
     return (
         <>
-            <Container maxWidth={false} sx={{
-                bgcolor: "primary.main",
-                color: "white",
-                display: "flex",
-                justifyContent: "space-between",
-                alignContent: "center",
-                alignItems: "center",
-                p: 2,
-                m: 0
+            {/* Container para el componente */}
+            <Container maxWidth={false} sx={{       // con maxWidth = false hacemos que no haya un ancho maximo, sino que ocupe toda la página
+                bgcolor: "primary.main",            // tendrá un color de fondo vino
+                color: "white",                     // letras blancas
+                display: "flex",                    // display flex para una mejor organización
+                justifyContent: "space-between",    // la justificación será space-between
+                alignItems: "center",               // items alineados al centro
+                p: 2,                               // padding general de 16px
+                m: 0                                // margen general de 0px
             }}>
-                <Container sx={{
-                    flex: "1",
-                    display:"flex",
-                    alignContent: "center",
-                    alignItems: "center",
+                <Container sx={{                // este Container tendrá el logo de la App y el saludo al admin oportuno
+                    display: "flex",            // se organiza mediante flex
+                    alignItems: "center",       // se alinean al centro los items
                 }}>
-                    <img src={car} alt="" width={"8%"} style={{marginRight:"1rem"}} />
-                    Hola&nbsp;<u> nombre Admin</u>!
+                    {/* Se agrega la imágen previamente importada al componente desde resources */}
+                    <img src={car} alt="" width={"8%"} style={{ marginRight: "1rem" }} />
+
+                    {/* Se agrega el saludo al admin con Typography de MUI, &nbsp sirve para agregar un espacio */}
+                    <Typography variant="body1" color="white"> Hola&nbsp;<u>nombre Admin</u>!</Typography>
+
                 </Container>
+
+                {/* Se agrega el componente Avatar de MUI  */}
                 <Avatar />
             </Container>
         </>
