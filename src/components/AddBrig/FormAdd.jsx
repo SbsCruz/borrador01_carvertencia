@@ -14,7 +14,6 @@ export const FormAdd = () => {
                 display: "flex",                // Hacemos un display flex para que se organice mejor los elementos hijos 
                 flexDirection: "column",        // la dirección del flex es vertical
                 alignItems: "center",           // alineamos los items al centro
-                height: "100vh"                 // para que el fondo se complete
             }}>
                 {/* Titulo y subtitulo */}
                 {/* Definimos un h3 en negrita, alineado al centro el título del componente */}
