@@ -8,10 +8,10 @@ function Login() {
   return (
     <>
       <div className="App">
-        <Link to={"/"}>
-          <Banner/>
-        </Link>
-        <FormAdd/>
+
+          <Banner ruta={"/"} />
+
+        <FormAdd />
       </div>
     </>
   );

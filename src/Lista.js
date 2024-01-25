@@ -8,9 +8,7 @@ function Login() {
   return (
     <>
       <div className="App">
-        <Link to={"/"}>
-          <Banner/>
-        </Link>
+        <Banner ruta={"/"} />
         <ListaBrig />
       </div>
     </>

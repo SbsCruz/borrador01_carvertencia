@@ -1,9 +1,12 @@
 // Componente Banner que se muestra en varias interfaces
 
+import { useNavigate } from "react-router-dom";
 import car from '../../resources/carLogo.png'
 import { Avatar, Container, Typography } from '@mui/material'
 
-export const Banner = () => {
+export const Banner = ({ruta}) => {
+    const nav = useNavigate();
+    const handleRoute = () => nav(ruta)
     return (
         <>
             {/* Container para el componente */}
@@ -22,7 +25,8 @@ export const Banner = () => {
                     ml:0                        // se alinean al centro los items
                 }}>
                     {/* Se agrega la imágen previamente importada al componente desde resources */}
-                    <img src={car} alt="Logo" width={"8%"} style={{ marginRight: "1rem" }}/>
+                    
+                    <img src={car} alt="Logo" width={"8%"} style={{ marginRight: "1rem", cursor: "pointer" }} onClick={handleRoute} />
 
                     {/* Se agrega el saludo al admin con Typography de MUI, &nbsp sirve para agregar un espacio */}
                     <Typography variant="body1" color="white"> Hola&nbsp;<u>nombre Admin</u>!</Typography>
