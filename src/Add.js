@@ -8,9 +8,7 @@ function Login() {
   return (
     <>
       <div className="App">
-
-          <Banner ruta={"/"} />
-
+        <Banner ruta={"/list"} />
         <FormAdd />
       </div>
     </>
