@@ -13,6 +13,7 @@ import Login from './Login';
 import Lista from './Lista';
 import Add from './Add';
 import { ThemeProvider, createTheme } from '@mui/material';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 // Se crea un theme de MUI en donde se define una paleta de colores
 // que se usarán en distintos componentes de la app
@@ -32,7 +33,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <Add/> {/*Esta parte servirá para cambiar de componetenes Login, Lista, Add*/}
+      <BrowserRouter>
+      <Routes>
+        <Route path='/add'      element={<Add/>}      />
+        <Route path='/'         element={<Login/>}    /> 
+        <Route path='/list'     element={<Lista/>}    />  
+      </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   </React.StrictMode>
 );

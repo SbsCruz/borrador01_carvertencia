@@ -4,7 +4,9 @@ import { Container, Typography, TextField, Link } from '@mui/material'
 import { CustomBtn } from '../Comunes/CustomBtn'
 
 
+
 export const Register = () => {
+
     return (
         <>
             {/* Container para todo el componente */}
@@ -35,7 +37,8 @@ export const Register = () => {
                 </Container>
 
                 {/* Componente Botón Custommizable  */}
-                <CustomBtn texto={"INGRESA"} />
+                {/* Añadimos una ruta cuando de clic en el botón */}
+                <CustomBtn texto={"INGRESA"} ruta={"/list"}/>
 
                 {/* Container para opciones adicionales */}
                 <Container sx={{mt:"2rem"}}>

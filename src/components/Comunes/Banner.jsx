@@ -22,7 +22,7 @@ export const Banner = () => {
                     ml:0                        // se alinean al centro los items
                 }}>
                     {/* Se agrega la imágen previamente importada al componente desde resources */}
-                    <img src={car} alt="Logo" width={"8%"} style={{ marginRight: "1rem" }} />
+                    <img src={car} alt="Logo" width={"8%"} style={{ marginRight: "1rem" }}/>
 
                     {/* Se agrega el saludo al admin con Typography de MUI, &nbsp sirve para agregar un espacio */}
                     <Typography variant="body1" color="white"> Hola&nbsp;<u>nombre Admin</u>!</Typography>

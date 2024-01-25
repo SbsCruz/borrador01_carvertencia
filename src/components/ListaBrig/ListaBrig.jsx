@@ -64,7 +64,7 @@ export const ListaBrig = () => {
                 </List>
 
                 {/* Se tiene el componete botón, el cual es customizable dado que se usa en varias interfaces y tiene el mismo estilo */}
-                <CustomBtn texto={"AÑADIR BRIGADISTA"} />
+                <CustomBtn texto={"AÑADIR BRIGADISTA"} ruta={"/add"}/>
 
                 {/* La opción para seleccionar otra comunidad */}
                 <Link href="#" sx={{ color: "white", fontSize: 10, mt: 5 }}><u>O selecciona de otra comunidad</u></Link>
