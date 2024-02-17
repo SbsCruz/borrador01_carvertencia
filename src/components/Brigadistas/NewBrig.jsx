@@ -3,10 +3,12 @@
 import { Container, Typography, TextField, Avatar } from '@mui/material'
 import photo from '../../resources/photo.png'
 import { CustomBtn } from '../Comunes/CustomBtn'
+import { Banner } from '../Comunes/Banner'
 
-export const FormAdd = () => {
+export const NewBrig = () => {
     return (
         <>
+        <Banner ruta={"/welcome"}/>
             {/* Definimos un Container de MUI en el que se almacenará toda la parte del formulario con inputs */}
             <Container maxWidth={false} sx={{   // con sx podemos manejar varios estilos de CSS de manera más simple 
                 bgcolor: "secondary.main",      // definimos el color secundario, que es una especie de navy blue
@@ -60,7 +62,7 @@ export const FormAdd = () => {
                 </Container>
 
                 {/* Se tiene el componente botón, el cual es customizable dado que se usa en varias interfaces y tiene el mismo estilo */}
-                <CustomBtn texto={"AÑADIR BRIGADISTA"} style={{ marginBottom: "10rem" }} />
+                <CustomBtn texto={"AÑADIR BRIGADISTA"} style={{ marginBottom: "10rem" }} ruta={"/brigadistas"}/>
 
                 {/* etiqueta vacía para aumentar el tamaño de la página y se vea del color navy blue  */}
                 <u style={{ marginBottom: "10rem" }} />

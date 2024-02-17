@@ -4,10 +4,12 @@ import { CustomBtn } from '../Comunes/CustomBtn'
 import Typography from '@mui/material/Typography'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { List, ListItem, ListItemText, Avatar, Container, TextField, Link } from '@mui/material'
+import { Banner } from '../Comunes/Banner';
 
 export const ListaBrig = () => {
     return (
         <>
+        <Banner ruta={"/welcome"}/>
             {/* Definimos un Container que albergue todo el componente */}
             <Container maxWidth={false} sx={{
                 bgcolor: "secondary.main",          // Fondo de color navy blue
@@ -64,10 +66,10 @@ export const ListaBrig = () => {
                 </List>
 
                 {/* Se tiene el componete botón, el cual es customizable dado que se usa en varias interfaces y tiene el mismo estilo */}
-                <CustomBtn texto={"AÑADIR BRIGADISTA"} ruta={"/add"}/>
+                <CustomBtn texto={"AÑADIR BRIGADISTA"} ruta={"/brigadistas/new"}/>
 
                 {/* La opción para seleccionar otra comunidad */}
-                <Link href="#" sx={{ color: "white", fontSize: 10, mt: 5 }}><u>O selecciona de otra comunidad</u></Link>
+                <Link href="/comunidades" sx={{ color: "white", fontSize: 10, mt: 5 }}><u>O selecciona de otra comunidad</u></Link>
 
             </Container>
         </>

@@ -38,7 +38,7 @@ export const Register = () => {
 
                 {/* Componente Botón Custommizable  */}
                 {/* Añadimos una ruta cuando de clic en el botón */}
-                <CustomBtn texto={"INGRESA"} ruta={"/list"}/>
+                <CustomBtn texto={"INGRESA"} ruta={"/comunidades"}/>
 
                 {/* Container para opciones adicionales */}
                 <Container sx={{mt:"2rem"}}>
