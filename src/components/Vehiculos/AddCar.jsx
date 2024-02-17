@@ -58,12 +58,6 @@ export const AddCar = () => {
                         sx={{ bgcolor: "white", width: "30%", my: "1rem", p: 1 }}
                     />
 
-                    {/* SECTOR-BARRIO */}
-                    <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> SECTOR O BARRIO</Typography>
-                    <TextField id="sec" placeholder="Sector/Barrio" variant='standard'
-                        sx={{ bgcolor: "white", width: "30%", my: "1rem", p: 1 }}
-                    />
-
                     {/* COLOR */}
                     <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> COLOR DEL VEHÍCULO</Typography>
                     <Select

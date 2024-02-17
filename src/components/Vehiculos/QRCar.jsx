@@ -1,34 +1,54 @@
-// Componente de Búsqueda y Visualización de Birgadistas
-
-import { CustomBtn } from '../Comunes/CustomBtn'
+// Componente de QR
 import Typography from '@mui/material/Typography'
 import { Banner } from '../Comunes/Banner'
-import { Container, Link } from '@mui/material'
+import { Container, Link, Box } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
+import qr from "../../resources/photo.png"
+import print from "../../resources/print.png"
+import home from "../../resources/home.png"
 
 export const QRCar = () => {
+    const nav = useNavigate()
+    const handleCar = () => nav("/autos")
+    const handleHome = () => nav("/welcome")
+    //funcion a modificar 
+    const downloadQRCode = () => {
+        const link = document.createElement('a');
+        link.href = qr;
+        link.download = 'QRcode.png';
+        link.click();
+    }
+    
+    const printQRCode = () => {
+        window.print();
+    }
     return (
         <>
             <Banner />
             {/* Definimos un Container que albergue todo el componente */}
             <Container maxWidth={false} sx={{
-                bgcolor: "secondary.main",          // Fondo de color navy blue
-                color: "white",                     // letras blancas
-                display: "flex",                    // usaremos flex
-                flexDirection: "column",            // la direcicón del flex será vertical
-                height: "100vh",                     // para que el fondo se complete
-                alignItems: "center",               // items alineado al centro
-                p: 2,                               // padding general de 16 pixeles
-                m: 0                                // sin margen
+                bgcolor: "secondary.main",
+                color: "white",
+                display: "flex",
+                flexDirection: "column",
+                height: "100vh",
+                alignItems: "center",
+                justifyContent: "center",
+                p: 2,
+                m: 0
             }}>
-                {/* Titulo y subtitulo */}
-                {/* Definimos un h3 en negrita, alineado al centro el título del componente */}
-                <Typography variant="h3" fontWeight={"bold"} textAlign={'center'}> QR DE SU AUTOMÓVIL</Typography>
-
-
-                {/* Se tiene el componete botón, el cual es customizable dado que se usa en varias interfaces y tiene el mismo estilo */}
-                <CustomBtn texto={"AGREGAR AUTOMÓVIL"} ruta={"/addCar"} />
-
-
+                <Typography variant="h3" fontWeight={"bold"}> QR DE SU AUTOMÓVIL</Typography>
+                <Box style={{ marginTop: '0.5rem' }}>
+                    <img src={qr} alt="QR code" style={{ width: '80%', border: '8px solid #6d2829', marginLeft : '2rem' }} />
+                </Box>
+                <Container sx={{ textAlign: "center", mt: 1 }} >
+                    <img src={print} alt="Print" style={{ width: "10%", cursor: "pointer", gap: "1rem", marginRight: "5rem" }} onClick={printQRCode} />
+                    <img src={print} alt="Save" style={{ width: "10%", cursor: "pointer" }} onClick={downloadQRCode} />
+                    <br />
+                    <img src={home} alt="Administración de autos" style={{ width: "10%", cursor: "pointer" }} onClick={handleCar} />
+                    <br />
+                    <img src={home} alt="Home" style={{ width: "10%", cursor: "pointer", marginTop: '1rem' }} onClick={handleHome} />
+                </Container>
             </Container>
         </>
     )
