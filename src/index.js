@@ -35,8 +35,17 @@ root.render(
     <ThemeProvider theme={theme}>
       <BrowserRouter>
       <Routes>
+        {/* La ruta  / nos muestra el formulario para loguearnos */}
+        <Route path='/'         element={<Login/>}    />
+        {/* La ruta  /:id muestra el proceso de recuperacion de usuario */}
+        {/* <Route path='/:id'       element={<User/>}     /> */}
+        {/* La ruta /tareas/:id nos muestra un interfaz de ingreso con las opciones */}
+        {/* <Route path='/tareas/:id' element={<Welcome/>} /> */}
+        {/* La ruta  /:id/tareas/add muestra el formualrio para crear un brigadista*/}
+         {/* <Route  path='/:id/tareas/add' element = {<Add/>} /> */}
         <Route path='/add'      element={<Add/>}      />
-        <Route path='/'         element={<Login/>}    /> 
+        {/*  La ruta  /list muestra la lista de brigadistas en una comunidad*/}
+        {/* <Route path='/:id/tareas/list'     element={<Lista/>}    />  */}
         <Route path='/list'     element={<Lista/>}    />  
       </Routes>
       </BrowserRouter>
