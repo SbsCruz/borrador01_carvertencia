@@ -1,16 +1,16 @@
-// Componente para añadir un Brigadista
+// Componente para añadir un Propietario
 
-import { Container, Typography, TextField, Avatar } from '@mui/material'
-import photo from '../../resources/photo.png'
+import { Container, Typography, TextField } from '@mui/material'
+import React from 'react';
 import { CustomBtn } from '../Comunes/CustomBtn'
 import { Banner } from '../Comunes/Banner'
+import photo from '../../resources/photo.png'
 
+export const EditPro = () => {
 
-export const NewBrig = () => {
     return (
         <>
-        <Banner ruta={"/welcome"}/>
-            {/* Definimos un Container de MUI en el que se almacenará toda la parte del formulario con inputs */}
+            <Banner ruta={"/autos"} />
             <Container maxWidth={false} sx={{   // con sx podemos manejar varios estilos de CSS de manera más simple 
                 bgcolor: "secondary.main",      // definimos el color secundario, que es una especie de navy blue
                 color: "white",                 // la letra será azul
@@ -20,7 +20,7 @@ export const NewBrig = () => {
             }}>
                 {/* Titulo y subtitulo */}
                 {/* Definimos un h3 en negrita, alineado al centro el título del componente */}
-                <Typography variant="h3" fontWeight={"bold"} textAlign={'center'} marginTop={5}> AÑADE UN BRIGADISTA</Typography>
+                <Typography variant="h3" fontWeight={"bold"} textAlign={'center'} marginTop={5}> AÑADE UN PROPIETARIO</Typography>
                 {/* Definimos un h4 en letra de ancho normal, alineado al centro que muestra la comunidad  */}
                 <Typography variant="h4" textAlign={'center'}> COMUNIDAD B</Typography>
 
@@ -35,35 +35,30 @@ export const NewBrig = () => {
                     {/* Se tienen los mismo estilos para estos componentes */}
                     {/* NOMBRE */}
                     <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> NOMBRE</Typography>
-                    <TextField id="name" placeholder="Nombre" variant='standard'
+                    <TextField id="nombre" placeholder="Nombre" variant='standard'
                         sx={{ bgcolor: "white", width: "30%", my: "1rem", p: 1 }}
                     /> {/* Se tiene un backgroundColor blanco para el input, con un largo del 30%, un margen vertical de 1rem  y un padding de 8px general*/}
 
-                    {/* CEDULA */}
-                    <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> CÉDULA</Typography>
-                    <TextField id="ced" placeholder="Cédula" variant='standard'
+                    {/* Cedula */}
+                    <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> CEDULA</Typography>
+                    <TextField id="ced" placeholder="Cedula" variant='standard' type='number'
                         sx={{ bgcolor: "white", width: "30%", my: "1rem", p: 1 }}
-                    /> {/* Además se tiene un placeholder oportuno para cada input, y la variante de input es estandar, tiene un fondo, la otra opción era outlined*/}
+                    />
 
-                    {/* DIRECCION */}
+                    {/* Direccion */}
                     <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> DIRECCIÓN</Typography>
-                    <TextField id="dir" placeholder="Dirección" variant='standard'
-                        sx={{ bgcolor: "white", width: "30%", my: "1rem", p: 1 }}
-                    /> {/* Para la Typography se utiliza un título 5, con letra fina y alineado al centro */}
-
-                    {/* SECTOR-BARRIO */}
-                    <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> SECTOR O BARRIO</Typography>
-                    <TextField id="sec" placeholder="Sector/Barrio" variant='standard'
+                    <TextField id="dir" placeholder="Direccion" variant='standard'
                         sx={{ bgcolor: "white", width: "30%", my: "1rem", p: 1 }}
                     />
 
                     {/* FOTOGRAFÍA */}
                     <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> FOTOGRAFÍA</Typography>
                     <img src={photo} style={{ width: "10%" }} /> {/* La imagen es una foto predeterminada en png */}
+
                 </Container>
 
                 {/* Se tiene el componente botón, el cual es customizable dado que se usa en varias interfaces y tiene el mismo estilo */}
-                <CustomBtn texto={"AÑADIR BRIGADISTA"} style={{ marginBottom: "10rem" }} ruta={"/brigadistas"}/>
+                <CustomBtn texto={"EDITAR"} style={{ marginBottom: "10rem" }} ruta={"/propietarios"} />
 
                 {/* etiqueta vacía para aumentar el tamaño de la página y se vea del color navy blue  */}
                 <u style={{ marginBottom: "10rem" }} />
