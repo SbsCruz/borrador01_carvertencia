@@ -18,6 +18,10 @@ import { EditComu } from './components/Comunidades/EditComu';
 import { Welcome } from './components/Comunes/Welcome';
 import { ListaBrig } from './components/Brigadistas/ListaBrig';
 import { NewBrig } from './components/Brigadistas/NewBrig';
+// Agregados
+import { ListaCar } from './components/Vehiculos/ListaCar';
+import { AddCar } from './components/Vehiculos/AddCar';
+import { QRCar } from './components/Vehiculos/QRCar';
 
 // Se crea un theme de MUI en donde se define una paleta de colores
 // que se usarán en distintos componentes de la app
@@ -67,6 +71,10 @@ root.render(
 
           {/*  La ruta  /list muestra la lista de brigadistas en una comunidad*/}
           {/* <Route path='/:id/tareas/list'     element={<Lista/>}    />  */}
+          {/* Rutas para vehiculos */}
+          <Route path="/autos" element={<ListaCar />} />
+          <Route path="/autos/new" element={<AddCar/>} />  
+          <Route path="/autos/qr" element={<QRCar  />} />
 
         </Routes>
       </BrowserRouter>
