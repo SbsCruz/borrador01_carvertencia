@@ -35,19 +35,19 @@ export const EditPro = () => {
                     {/* Se tienen los mismo estilos para estos componentes */}
                     {/* NOMBRE */}
                     <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> NOMBRE</Typography>
-                    <TextField id="nombre" placeholder="Nombre" variant='standard'
+                    <TextField id="nombre" placeholder="Nombre" variant='standard' disabled='off'
                         sx={{ bgcolor: "white", width: "30%", my: "1rem", p: 1 }}
                     /> {/* Se tiene un backgroundColor blanco para el input, con un largo del 30%, un margen vertical de 1rem  y un padding de 8px general*/}
 
                     {/* Cedula */}
                     <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> CEDULA</Typography>
-                    <TextField id="ced" placeholder="Cedula" variant='standard' type='number'
+                    <TextField id="ced" placeholder="Cedula" variant='standard' type='number' disabled='off'
                         sx={{ bgcolor: "white", width: "30%", my: "1rem", p: 1 }}
                     />
 
                     {/* Direccion */}
                     <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> DIRECCIÓN</Typography>
-                    <TextField id="dir" placeholder="Direccion" variant='standard'
+                    <TextField id="dir" placeholder="Direccion" variant='standard' 
                         sx={{ bgcolor: "white", width: "30%", my: "1rem", p: 1 }}
                     />
 

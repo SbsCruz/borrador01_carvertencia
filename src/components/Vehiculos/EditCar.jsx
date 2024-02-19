@@ -18,7 +18,7 @@ export const EditCar = () => {
     }
     return (
         <>
-            <Banner ruta={"/autos"}/>
+            <Banner ruta={"/autos"} />
             <Container maxWidth={false} sx={{   // con sx podemos manejar varios estilos de CSS de manera más simple 
                 bgcolor: "secondary.main",      // definimos el color secundario, que es una especie de navy blue
                 color: "white",                 // la letra será azul
@@ -28,7 +28,7 @@ export const EditCar = () => {
             }}>
                 {/* Titulo y subtitulo */}
                 {/* Definimos un h3 en negrita, alineado al centro el título del componente */}
-                <Typography variant="h3" fontWeight={"bold"} textAlign={'center'} marginTop={5}> AÑADE UN AUTOMÓVIL</Typography>
+                <Typography variant="h3" fontWeight={"bold"} textAlign={'center'} marginTop={5}> EDITA UN AUTOMÓVIL</Typography>
                 {/* Definimos un h4 en letra de ancho normal, alineado al centro que muestra la comunidad  */}
                 <Typography variant="h4" textAlign={'center'}> COMUNIDAD B</Typography>
 
@@ -43,18 +43,18 @@ export const EditCar = () => {
                     {/* Se tienen los mismo estilos para estos componentes */}
                     {/* PLACA */}
                     <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> PLACA</Typography>
-                    <TextField id="placa" placeholder="Placa" variant='standard'
+                    <TextField id="placa" placeholder="Placa" variant='standard' disabled='off'
                         sx={{ bgcolor: "white", width: "30%", my: "1rem", p: 1 }}
                     /> {/* Se tiene un backgroundColor blanco para el input, con un largo del 30%, un margen vertical de 1rem  y un padding de 8px general*/}
 
                     {/* MODELO */}
                     <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> MODELO</Typography>
-                    <TextField id="mod" placeholder="Modelo" variant='standard'
+                    <TextField id="mod" placeholder="Modelo" variant='standard' disabled='off'
                         sx={{ bgcolor: "white", width: "30%", my: "1rem", p: 1 }}
                     />
                     {/* AÑO */}
                     <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> AÑO</Typography>
-                    <TextField id="year" placeholder="Año" variant='standard' type='number'
+                    <TextField id="year" placeholder="Año" variant='standard' type='number' disabled='off'
                         sx={{ bgcolor: "white", width: "30%", my: "1rem", p: 1 }}
                     />
 
@@ -79,6 +79,7 @@ export const EditCar = () => {
                     {/* DUEÑO */}
                     <Typography variant="h5" fontWeight={"light"} textAlign={'center'}> SELECCIONE EL DUEÑO</Typography>
                     <Select
+                        disabled='off'
                         id="due"
                         value={dueno}
                         onChange={handleDueñoChange}

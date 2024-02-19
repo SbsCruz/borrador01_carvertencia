@@ -15,13 +15,10 @@ export const QRCar = () => {
     const downloadQRCode = () => {
         const link = document.createElement('a');
         link.href = qr;
-        link.download = 'QRcode.png';
+        link.download = 'QRcode.png';//ruta para descargar  el archivo
         link.click();
     }
     
-    const printQRCode = () => {
-        window.print();
-    }
     return (
         <>
             <Banner />
@@ -42,7 +39,6 @@ export const QRCar = () => {
                     <img src={qr} alt="QR code" style={{ width: '80%', border: '8px solid #6d2829', marginLeft : '2rem' }} />
                 </Box>
                 <Container sx={{ textAlign: "center", mt: 1 }} >
-                    <img src={print} alt="Print" style={{ width: "10%", cursor: "pointer", gap: "1rem", marginRight: "5rem" }} onClick={printQRCode} />
                     <img src={print} alt="Save" style={{ width: "10%", cursor: "pointer" }} onClick={downloadQRCode} />
                     <br />
                     <img src={home} alt="Administración de autos" style={{ width: "10%", cursor: "pointer" }} onClick={handleCar} />
