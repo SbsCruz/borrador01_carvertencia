@@ -27,6 +27,7 @@ import { AddPro } from './components/Propietarios/AddPro';
 import { ListaPro } from './components/Propietarios/ListaPro';
 import { EditPro} from './components/Propietarios/EditPro';
 
+
 // Se crea un theme de MUI en donde se define una paleta de colores
 // que se usarán en distintos componentes de la app
 const theme = createTheme({
@@ -61,6 +62,7 @@ root.render(
           {/* Rutas para Brigadistas */}
           <Route path='/brigadistas' element={<ListaBrig />} />
           <Route path='/brigadistas/new' element={<NewBrig />} />
+          <Route path='/brigadistas/edit' element={<EditBrig />} />
 
 
           {/* La ruta  /:id muestra el proceso de recuperacion de usuario */}
