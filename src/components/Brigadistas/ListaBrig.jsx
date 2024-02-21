@@ -5,8 +5,11 @@ import Typography from '@mui/material/Typography'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { List, ListItem, ListItemText, Avatar, Container, TextField, Link } from '@mui/material'
 import { Banner } from '../Comunes/Banner';
+import { useNavigate } from 'react-router-dom';
 
 export const ListaBrig = () => {
+    const nav = useNavigate()
+    const handlerEdit = () => nav("/brigadistas/edit")
     return (
         <>
         <Banner ruta={"/welcome"}/>
@@ -43,7 +46,7 @@ export const ListaBrig = () => {
                         }}
                             primary="Nombre Brigadista A"   // Texto del <li>
                         />
-                        <MoreVertIcon /> {/* este componente es un icono predefinido de MUI*/}
+                        <MoreVertIcon sx={{cursor: "pointer"}} onClick={handlerEdit} /> {/* este componente es un icono predefinido de MUI*/}
                     </ListItem>
                     <ListItem>
                         <Avatar />
@@ -52,7 +55,7 @@ export const ListaBrig = () => {
                         }}
                             primary="Nombre Brigadista B"
                         />
-                        <MoreVertIcon />
+                        <MoreVertIcon sx={{cursor: "pointer"}} onClick={handlerEdit} />
                     </ListItem>
                     <ListItem>
                         <Avatar />
@@ -61,7 +64,7 @@ export const ListaBrig = () => {
                         }}
                             primary="Nombre Brigadista C"
                         />
-                        <MoreVertIcon />
+                        <MoreVertIcon sx={{cursor: "pointer"}} onClick={handlerEdit} />
                     </ListItem>
                 </List>
 

@@ -18,6 +18,7 @@ import { EditComu } from './components/Comunidades/EditComu';
 import { Welcome } from './components/Comunes/Welcome';
 import { ListaBrig } from './components/Brigadistas/ListaBrig';
 import { NewBrig } from './components/Brigadistas/NewBrig';
+import { EditBrig } from './components/Brigadistas/EditBrig';
 
 // Se crea un theme de MUI en donde se define una paleta de colores
 // que se usarán en distintos componentes de la app
@@ -53,6 +54,7 @@ root.render(
           {/* Rutas para Brigadistas */}
           <Route path='/brigadistas' element={<ListaBrig />} />
           <Route path='/brigadistas/new' element={<NewBrig />} />
+          <Route path='/brigadistas/edit' element={<EditBrig />} />
 
 
           {/* La ruta  /:id muestra el proceso de recuperacion de usuario */}
