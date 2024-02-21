@@ -18,6 +18,14 @@ import { EditComu } from './components/Comunidades/EditComu';
 import { Welcome } from './components/Comunes/Welcome';
 import { ListaBrig } from './components/Brigadistas/ListaBrig';
 import { NewBrig } from './components/Brigadistas/NewBrig';
+// Agregados
+import { ListaCar } from './components/Vehiculos/ListaCar';
+import { AddCar } from './components/Vehiculos/AddCar';
+import { QRCar } from './components/Vehiculos/QRCar';
+import { EditCar } from './components/Vehiculos/EditCar';
+import { AddPro } from './components/Propietarios/AddPro';
+import { ListaPro } from './components/Propietarios/ListaPro';
+import { EditPro} from './components/Propietarios/EditPro';
 
 // Se crea un theme de MUI en donde se define una paleta de colores
 // que se usarán en distintos componentes de la app
@@ -67,7 +75,17 @@ root.render(
 
           {/*  La ruta  /list muestra la lista de brigadistas en una comunidad*/}
           {/* <Route path='/:id/tareas/list'     element={<Lista/>}    />  */}
+          {/* Rutas para vehiculos */}
+          <Route path="/autos" element={<ListaCar />} />
+          <Route path="/autos/new" element={<AddCar />} />
+          <Route path="/autos/qr" element={<QRCar />} />
+          <Route path="/autos/edit" element={<EditCar />} />
 
+          {/* Rutas para propietarios */}
+          <Route path="/propietarios" element={<ListaPro />} />
+          <Route path="/propietarios/new" element={<AddPro />} />
+          <Route path='/propietarios/edit' element={<EditPro />} />
+        
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
