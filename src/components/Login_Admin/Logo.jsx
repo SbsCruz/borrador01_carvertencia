@@ -1,9 +1,21 @@
-import carLogo from '../../resources/carLogo.png'
+// Componente Logo que se usa en el Login
 
-export default function Logo() {
+import car from '../../resources/carLogo.png'
+import { Container } from '@mui/material'
+
+export const Logo = () => {
     return (
-        <div className="banner">
-            <img src={carLogo} alt="Car-Vertencia logo" />
-        </div>
+
+        // es la misma configuración del Componente Banner pero con el color secundario definido en theme
+        <>
+            <Container maxWidth={false} sx={{
+                bgcolor: "secondary.main",
+                p: "1px 2px",
+                m: 0
+            }}>
+
+                <img src={car} alt="" width={"8%"} />
+            </Container>
+        </>
     )
 }

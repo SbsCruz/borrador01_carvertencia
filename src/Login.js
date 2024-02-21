@@ -1,5 +1,6 @@
-import './styles/Login.css';
-import Logo from './components/Login_Admin/Logo';
+// Componente que alberga componentes Logo y Register
+
+import { Logo } from './components/Login_Admin/Logo';
 import { Register } from './components/Login_Admin/Register';
 
 function Login() {
