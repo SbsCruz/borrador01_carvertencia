@@ -18,6 +18,7 @@ import { EditComu } from './components/Comunidades/EditComu';
 import { Welcome } from './components/Comunes/Welcome';
 import { ListaBrig } from './components/Brigadistas/ListaBrig';
 import { NewBrig } from './components/Brigadistas/NewBrig';
+import { EditBrig } from './components/Brigadistas/EditBrig';
 // Agregados
 import { ListaCar } from './components/Vehiculos/ListaCar';
 import { AddCar } from './components/Vehiculos/AddCar';
