@@ -13,10 +13,13 @@ const Home = ({ navigation }) => {
         navigation.navigate('Validate');
     };
     const handleIncident = (e) => {
-        navigation.navigate('Report')
+        navigation.navigate('Reporte')
     }
     const handleHome = (e) => {
         navigation.goBack();
+    }
+    const handleRegistro = (e) =>{
+        navigation.navigate("Historial");
     }
 
     return (
@@ -25,7 +28,7 @@ const Home = ({ navigation }) => {
                 <Text style={styles.welcomeText}>Hola  </Text>
                 <Text style={styles.welcomeTextBold}>NombreBrigadista!</Text>
                 <View style={styles.imageContainer}>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={handleRegistro} >
                         <Image source={Registro} style={styles.logo}></Image>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={handleHome}>
@@ -64,7 +67,7 @@ const styles = StyleSheet.create({
     welcomeText: {
         color: "white",
         fontSize: 20,
-        fontWeight: "normal",
+        fontWeight: "bold",
         marginLeft: 20
     },
     welcomeTextBold: {

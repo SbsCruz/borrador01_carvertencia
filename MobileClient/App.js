@@ -6,6 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from  './Components/Login/Login'
 import Home from './Components/Login/Home'
 import Validate from './Components/Validar/Validate'
+import Reporte from './Components/Reporte/Reporte';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -16,6 +17,7 @@ export default function App() {
         <Stack.Screen name="Login" component ={Login} options={{title:"Brigadista", headerShown: false}}/>
         <Stack.Screen name="Home" component={Home} options={{title: "Inicio", headerShown: false}}/>
         <Stack.Screen name="Validate" component={Validate} options={{title: "Validar", headerShown: false}}/>
+        <Stack.Screen name="Reporte" component={Reporte} options={{title: "Reporte", headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,7 +1,8 @@
 import React from "react";
-import { Button, StyleSheet, Text, View, TextInput, Image } from "react-native";
+import { Button, StyleSheet, Text, View, TextInput, Image, TouchableOpacity } from "react-native";
 import axios from "axios";
 import Logo from "../../resources/carLogo.png"
+import INGRESA from "../../resources/Ingresa.png"
 
 const UserLogin = ({ navigation }) => {
     const [user, setUser] = React.useState("");
@@ -31,7 +32,9 @@ const UserLogin = ({ navigation }) => {
                 secureTextEntry
             />
             {error && <Text style={styles.error}>{error}</Text>}
-            <Button style={styles.button} title="INGRESA" onPress={handleLogin} />
+            <TouchableOpacity onPress={handleLogin} >
+                <Image style={styles.button} source={INGRESA} />
+            </TouchableOpacity>
             <Text style={styles.forgot}>¿Haz olvidado tu contraseña?</Text>
             <Text style={styles.link}>Revisa los términos y condiciones aquí.</Text>
             <Image source={Logo} style={styles.logo}></Image>
@@ -84,11 +87,8 @@ const styles = StyleSheet.create({
         borderBottomColor: "white",
     },
     button: {
-        padding: 10,
-        marginTop: 20,
-        borderRadius: 50,
-        alignItems: 'center',
-        backgroundColor:"6d2829",
+        height: 150,
+        width: 150
     },
     logo: {
         width: 200,
