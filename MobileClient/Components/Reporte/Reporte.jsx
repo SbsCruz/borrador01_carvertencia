@@ -22,6 +22,7 @@ const Reporte = ({ navigation }) => {
             <Text style={styles.subtitle}>INGRESA EL INCIDENTE</Text>
             <TextInput
                 style={styles.inputT}
+                multiline
             />
             <TouchableOpacity>
                 <Image style={styles.button} source={ENVIAR} />
